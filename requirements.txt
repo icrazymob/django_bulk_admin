@@ -1,2 +1,2 @@
-Django>=3.4
+Django>=3.2
 six>=1.15.0

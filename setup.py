@@ -15,9 +15,9 @@ setup(
     license='BSD',
     description='Django bulk admin enables you to bulk add, bulk edit, bulk upload and bulk select in django admin.',
     long_description=README,
-    url='https://github.com/purelabs/django-bulk-admin',
-    author='Ruben Grill',
-    author_email='ruben.grill@gmail.com',
+    url='https://github.com/icrazymob/django_bulk_admin',
+    author='Barter Team',
+    author_email='stepan@samoylov.digital',
     install_requires=[
         'Django>=3.2',
         'six>=1.15.0',
