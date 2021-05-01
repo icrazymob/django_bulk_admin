@@ -9,8 +9,8 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-bulk-admin',
-    version='0.1.1',
-    packages=find_packages(exclude=('example_project*', 'screenshots',)),
+    version='0.1.2',
+    packages=find_packages(exclude=()),
     include_package_data=True,
     license='BSD',
     description='Django bulk admin enables you to bulk add, bulk edit, bulk upload and bulk select in django admin.',
@@ -19,7 +19,8 @@ setup(
     author='Ruben Grill',
     author_email='ruben.grill@gmail.com',
     install_requires=[
-        'Django>=1.7',
+        'Django>=3.2',
+        'six>=1.15.0',
     ],
     classifiers=[
         'Environment :: Web Environment',
