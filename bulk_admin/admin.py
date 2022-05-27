@@ -20,7 +20,7 @@ from django.template.response import SimpleTemplateResponse
 import six
 from django.utils.encoding import force_str
 from django.utils.text import get_text_list
-from django.utils.translation import ugettext as _, ugettext_lazy
+from django.utils.translation import gettext as _, gettext_lazy
 from functools import partial, update_wrapper
 
 import django
