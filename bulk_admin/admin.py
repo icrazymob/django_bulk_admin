@@ -159,7 +159,7 @@ class BulkModelAdmin(admin.ModelAdmin):
 
                     formset = formset_class(**formset_params)
 
-                    msg = _('The %s were bulk added successfully. You may edit them again below.') % (force_text(opts.verbose_name_plural),)
+                    msg = _('The %s were bulk added successfully. You may edit them again below.') % (force_str(opts.verbose_name_plural),)
                     self.message_user(request, msg, messages.SUCCESS)
 
                 else:
@@ -183,7 +183,7 @@ class BulkModelAdmin(admin.ModelAdmin):
             bulk=True,
             bulk_formset_prefix=prefix,
             bulk_upload_fields=self.get_bulk_upload_fields(request),
-            title=_('Bulk add %s') % force_text(opts.verbose_name_plural),
+            title=_('Bulk add %s') % force_str(opts.verbose_name_plural),
             is_popup=(IS_POPUP_VAR in request.POST or
                       IS_POPUP_VAR in request.GET),
             to_field=to_field,
@@ -202,8 +202,8 @@ class BulkModelAdmin(admin.ModelAdmin):
         opts = model._meta
         preserved_filters = self.get_preserved_filters(request)
         msg_dict = {
-            'name': force_text(opts.verbose_name),
-            'name_plural': force_text(opts.verbose_name_plural),
+            'name': force_str(opts.verbose_name),
+            'name_plural': force_str(opts.verbose_name_plural),
         }
 
         if IS_POPUP_VAR in request.POST:
